@@ -1,5 +1,5 @@
 // import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, DECIMAL, NUMBER } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
@@ -11,46 +11,42 @@ Product.init(
   {
     // define columns
 
-              id: {},
-
-              // Integer
+              id: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                primaryKey: true,
+                autoIncrement: true,
+              },
               
-              // Doesn't allow null values
+              product_name: {
+                type: DataTypes.STRING,
+                allowNull: false,
+              },
               
-              // Set as primary key
+              price: {
+                type: DataTypes.DECIMAL,
+                allowNull: false,
+                validate: {
+                  isDecimal: true,
+                }
+              },
               
-              // Uses auto increment
+              stock: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                defaultValue: 10,
+                validate: {
+                  type: NUMBER,
+                }
+              },
               
-              product_name: {},
-              
-              // String
-              
-              // Doesn't allow null values
-              
-              price: {},
-              
-              // Decimal
-              
-              // Doesn't allow null values
-              
-              // Validates that the value is a decimal
-              
-              stock: {},
-              
-              // Integer
-              
-              // Doesn't allow null values
-              
-              // Set a default value of 10
-              
-              // Validates that the value is numeric
-              
-              category_id: {},
-              
-              // Integer
-              
-              // References the category model's id
-
+              category_id: {
+                type: DataTypes.INTEGER,
+                references: {
+                  model: 'category',
+                  key: 'id'
+                }
+              },
 
   },
   {
