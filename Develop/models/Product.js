@@ -11,7 +11,7 @@ Product.init(
   {
     // define columns
 
-              // id
+              id: {},
 
               // Integer
               
@@ -21,13 +21,13 @@ Product.init(
               
               // Uses auto increment
               
-              // product_name
+              product_name: {},
               
               // String
               
               // Doesn't allow null values
               
-              // price
+              price: {},
               
               // Decimal
               
@@ -35,7 +35,7 @@ Product.init(
               
               // Validates that the value is a decimal
               
-              // stock
+              stock: {},
               
               // Integer
               
@@ -45,7 +45,7 @@ Product.init(
               
               // Validates that the value is numeric
               
-              // category_id
+              category_id: {},
               
               // Integer
               

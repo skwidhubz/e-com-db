@@ -7,12 +7,16 @@ class Category extends Model {}
 Category.init(
   {
     // define columns
+    id: {},
+    
         // id
         // Integer
         // Doesn't allow null values
         // Set as primary key
         // Uses auto increment
-        // category_name
+    category_name: {},
+
+    
         // String
         // Doesn't allow null values`
 

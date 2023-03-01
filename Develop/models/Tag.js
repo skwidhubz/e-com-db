@@ -9,7 +9,7 @@ Tag.init(
     // define columns
 
     
-          // id
+          id: {},
 
           // Integer
 
@@ -19,7 +19,7 @@ Tag.init(
 
           // Uses auto increment
 
-          // tag_name
+          tag_name: {},
 
           // String  
 
