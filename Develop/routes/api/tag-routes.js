@@ -38,7 +38,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/', (req, res) => { // THIS PATH IS NOT WORKING
   // create a new tag
   Tag.create({
     tag_name: req.body.tag_name
@@ -50,7 +50,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', (req, res) => { // THIS PATH IS NOT WORKING
   // update a tag's name by its `id` value
   Tag.update(req.body, {
     where: {
@@ -70,7 +70,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', (req, res) => { // THIS PATH IS NOT WORKING
   // delete on tag by its `id` value
   Tag.destroy({
     where: {
